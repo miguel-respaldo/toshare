@@ -21,6 +21,10 @@ public class Mir {
     }
 
     private boolean S() {
+        return term('c') && A() && term('d');
+    }
+
+    private boolean A() {
         int save = index;
         //return A1() || (index = save, A2());
         if ( ! A1() ) {
@@ -28,10 +32,6 @@ public class Mir {
             return A2();
         }
         return true;
-    }
-
-    private boolean A() {
-        return false;
     }
 
     private boolean A1() {
